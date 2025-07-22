@@ -1,0 +1,169 @@
+html_template = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Affiliate Link Showcase - West Lacost</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #000;
+  }
+  h1 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2rem;
+  }
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+  }
+  .grid-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+  .block {
+    background: #fff;
+    border: 3px solid;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  /* Neon border variants */
+  .neon-red {
+    border-color: #ff073a;
+    box-shadow:
+      0 0 5px #ff073a,
+      0 0 10px #ff073a,
+      0 0 20px #ff073a;
+  }
+  .neon-blue {
+    border-color: #0099ff;
+    box-shadow:
+      0 0 5px #0099ff,
+      0 0 10px #0099ff,
+      0 0 20px #0099ff;
+  }
+  h2 {
+    margin: 0 0 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  p {
+    margin: 0 0 20px;
+    flex-grow: 1;
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+  .btn {
+    align-self: flex-start;
+    padding: 10px 18px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  .btn:hover {
+    color: #000;
+    background: #fff;
+    border: 2px solid #000;
+  }
+
+  /* Responsive */
+  @media (max-width: 1000px) {
+    .grid-row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    .grid-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+  <h1>Affiliate Link Showcase</h1>
+  <div class="container">
+    <!-- First row of 5 blocks -->
+    <div class="grid-row">
+      <div class="block neon-red">
+        <h2>Product 1</h2>
+        <p>High quality item for your daily needs. Perfect for gifting and personal use.</p>
+        <a href="#" class="btn" target="_blank" rel="noopener">Go</a>
+      </div>
+      <div class="block neon-blue">
+        <h2>Product 2</h2>
+        <p>Experience the ultimate performance with this premium product.</p>
+        <a href="#" class="btn" target="_blank" rel="noopener">Go</a>
+      </div>
+      <div class="block neon-red">
+        <h2>Product 3</h2>
+        <p>Top-rated gadget that blends technology and style seamlessly.</p>
+        <a href="#" class="btn" target="_blank" rel="noopener">Go</a>
+      </div>
+      <div class="block neon-blue">
+        <h2>Product 4</h2>
+        <p>Designed for efficiency and durability. A must-have in your collection.</p>
+        <a href="#" class="btn" target="_blank" rel="noopener">Go</a>
+      </div>
+      <div class="block neon-red">
+        <h2>Product 5</h2>
+        <p>Innovative design meets exceptional quality and value.</p>
+        <a href="#" class="btn" target="_blank" rel="noopener">Go</a>
+      </div>
+    </div>
+
+    <!-- Second row of 5 blocks (same structure for you to add more) -->
+    <div class="grid-row">
+      <div class="block neon-blue">
+        <h2>Product 6</h2>
+        <p>Reliable and versatile, perfect for all occasions.</p>
+        <a href="#" class="btn" target="_blank" rel="noopener">Go</a>
+      </div>
+      <div class="block neon-red">
+        <h2>Product 7</h2>
+        <p>Engineered to deliver maximum performance and comfort.</p>
+        <a href="#" class="btn" target="_blank" rel="noopener">Go</a>
+      </div>
+      <div class="block neon-blue">
+        <h2>Product 8</h2>
+        <p>Elegant design paired with cutting-edge technology.</p>
+        <a href="#" class="btn" target="_blank" rel="noopener">Go</a>
+      </div>
+      <div class="block neon-red">
+        <h2>Product 9</h2>
+        <p>Compact, efficient, and built to last.</p>
+        <a href="#" class="btn" target="_blank" rel="noopener">Go</a>
+      </div>
+      <div class="block neon-blue">
+        <h2>Product 10</h2>
+        <p>Perfect combination of style and functionality.</p>
+        <a href="#" class="btn" target="_blank" rel="noopener">Go</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+"""
+
+# Saving file so user can download and edit
+file_path = "/mnt/data/affiliate_showcase_template.html"
+with open(file_path, "w", encoding="utf-8") as file:
+    file.write(html_template)
+
+file_path
